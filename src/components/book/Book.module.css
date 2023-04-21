@@ -1,0 +1,14 @@
+.book {
+    height: 600px;
+    width: 600px;
+    background:
+        linear-gradient(315deg, rgb(255, 255, 255),
+            rgba(0, 0, 8, 0) 30%),
+        linear-gradient(45deg, rgba(255, 0, 0, 1),
+            rgba(0, 0, 0, 0) 30%),
+        linear-gradient(135deg, rgba(0, 255, 0, 1),
+            rgba(0, 0, 0, 0) 30%),
+        linear-gradient(225deg, rgba(0, 0, 255, 1),
+            rgba(0, 0, 0, 0) 30%),
+        rgba(255, 255, 255, 0.6);
+}
