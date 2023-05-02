@@ -11,8 +11,10 @@
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "chroma-js": "^2.4.2",
+    "page-flip": "^2.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pageflip": "^2.0.3",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -42,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/chroma-js": "^2.4.0"
+    "@types/chroma-js": "^2.4.0",
+    "@types/page-flip": "^2.0.0"
   }
 }

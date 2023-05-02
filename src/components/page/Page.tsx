@@ -1,4 +1,4 @@
-import { FC } from "react"
+import React, { FC } from "react"
 import style from "./Page.module.css"
 import chroma from "chroma-js"
 type propsPage = {
@@ -11,7 +11,7 @@ let Page: FC<propsPage> = ({ colors }) => {
     // lrgb
     const mode = "lab"
     let scale = (color1: string, color2: string): Array<string> => {
-        return chroma.scale([color1, color2])
+        return chroma.scale([color1, color2]).gamma(1.4).padding([-0.1, 0])
             .mode(mode).colors(size)
     }
     let left = scale(colors[0], colors[2])
@@ -36,8 +36,13 @@ let Page: FC<propsPage> = ({ colors }) => {
         <div className={style.wrapper}>
             {page}
         </div>
-
     );
 }
-
-export default Page;
+const PageRef = React.forwardRef((props:any, ref:any) => {
+    return (
+        <div className="demoPage" ref={ref}>
+        <Page colors={props.colors}/>
+        </div>
+    );
+});
+export default PageRef;
