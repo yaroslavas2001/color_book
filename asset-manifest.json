@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/color_book/static/css/main.01e682e7.css",
+    "main.js": "/color_book/static/js/main.384fe8ad.js",
+    "static/js/787.ceb0ddd2.chunk.js": "/color_book/static/js/787.ceb0ddd2.chunk.js",
+    "index.html": "/color_book/index.html",
+    "main.01e682e7.css.map": "/color_book/static/css/main.01e682e7.css.map",
+    "main.384fe8ad.js.map": "/color_book/static/js/main.384fe8ad.js.map",
+    "787.ceb0ddd2.chunk.js.map": "/color_book/static/js/787.ceb0ddd2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01e682e7.css",
+    "static/js/main.384fe8ad.js"
+  ]
+}
