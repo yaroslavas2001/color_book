@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.block {
+    height: 4px;
+    width: 4px;
+    display: flex;
+}
