@@ -16,9 +16,9 @@ let Page: FC<propsPage> = ({ colors }) => {
     }
     let left = scale(colors[0], colors[2])
     let right = scale(colors[1], colors[3])
-   
+
     let ar = []
-   
+
     for (let i = 0; i < size; i++) {
         const leftColor = left[i];
         const rightColor = right[i];
@@ -26,8 +26,8 @@ let Page: FC<propsPage> = ({ colors }) => {
             .mode(mode).colors(size)
         ar.push(grad)
     }
-   
-   let page = ar.map((el, index) => <div key={index} className={style.row}>
+
+    let page = ar.map((el, index) => <div key={index} className={style.row}>
         {el.map((color, index) => <span key={index} style={{ background: color }} className={style.block}></span>)}
     </div>
     )
@@ -38,10 +38,10 @@ let Page: FC<propsPage> = ({ colors }) => {
         </div>
     );
 }
-const PageRef = React.forwardRef((props:any, ref:any) => {
+const PageRef = React.forwardRef((props: any, ref: any) => {
     return (
-        <div className="demoPage" ref={ref}>
-        <Page colors={props.colors}/>
+        <div className={style.bigPage} ref={ref}>
+            <Page colors={props.colors} />
         </div>
     );
 });

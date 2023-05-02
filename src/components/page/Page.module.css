@@ -12,3 +12,7 @@
     width: 4px;
     display: flex;
 }
+.bigPage:nth-child(2n) {
+    /* border: 2px solid red; */
+    -webkit-box-reflect: left;
+}

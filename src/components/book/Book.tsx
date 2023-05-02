@@ -6,7 +6,7 @@ import { LegacyRef, useCallback, useRef } from "react";
 import HTMLFlipBook from 'react-pageflip';
 
 function Book() {
-    let size = 4
+    let size = 10
     const mode = "lab"
     // left-top  to left-bottom
     let startColors: Array<string> = ["white", "yellow", "red", "#E04E7B"]
@@ -31,7 +31,7 @@ function Book() {
     }, []);
     return (
         <div className={style.wrapper}>
-            <input type="color" />
+            {/* <input type="color" /> */}
             <HTMLFlipBook
                 onFlip={onFlip}
                 width={300}
@@ -49,7 +49,7 @@ function Book() {
                 startPage={0}
                 startZIndex={0}
                 autoSize={true}
-                maxShadowOpacity={0.5}
+                maxShadowOpacity={0.9}
                 showCover={false}
                 mobileScrollSupport={true}
                 clickEventForward={true}
@@ -59,12 +59,7 @@ function Book() {
                 disableFlipByClick={false}
             >
                 {bookElement}
-                {/* <div>Page 1</div>
-                <div>Page 2</div>
-                <div>Page 3</div>
-                <div>Page 4</div> */}
             </HTMLFlipBook>
-            {/* <Page colors={startColors} /> */}
         </div>
 
     );
