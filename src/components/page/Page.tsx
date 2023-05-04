@@ -28,7 +28,8 @@ let Page: FC<propsPage> = ({ colors }) => {
     }
 
     let page = ar.map((el, index) => <div key={index} className={style.row}>
-        {el.map((color, index) => <span key={index} style={{ background: color }} className={style.block}></span>)}
+        {el.map((color, index) => 
+        <span key={index} style={{ background: color }} className={style.block}></span>)}
     </div>
     )
 

@@ -1,31 +1,33 @@
 import style from "./Book.module.css"
 import chroma from "chroma-js"
 import Page from "./../page/Page"
-import { PageFlip } from 'page-flip';
-import { LegacyRef, useCallback, useRef } from "react";
+import { FC, useCallback } from "react";
 import HTMLFlipBook from 'react-pageflip';
-
-function Book() {
+import { Color } from "../../App";
+type propsBook={
+    colors:Array<Color>
+}
+let Book:FC<propsBook>=({colors}) =>{
     let size = 10
+    
     const mode = "lab"
     // left-top  to left-bottom
-    let startColors: Array<string> = ["white", "yellow", "red", "#E04E7B"]
-    let endColors: Array<string> = ["violet", "green", "black", "blue"]
-
     let scale = (color1: string, color2: string): Array<string> => {
         return chroma.scale([color1, color2])
             .mode(mode).colors(size)
     }
-    let leftTop = scale(startColors[0], endColors[0])
-    let rightTop = scale(startColors[1], endColors[1])
-    let rightBottom = scale(startColors[2], endColors[2])
-    let leftBottom = scale(startColors[3], endColors[3])
+    
+    let leftTop = scale(colors[0].color, colors[4].color)
+    let rightTop = scale(colors[1].color, colors[5].color)
+    let rightBottom = scale(colors[2].color, colors[6].color)
+    let leftBottom = scale(colors[3].color, colors[7].color)
 
     let book = []
     for (let i = 0; i < size; i++) {
         book.push([leftTop[i], rightTop[i], rightBottom[i], leftBottom[i]])
     }
     let bookElement = book.map((el, index) => <Page key={index} colors={el}></Page>)
+
     const onFlip = useCallback((e: any) => {
         console.log('Current page: ' + e.data);
     }, []);
@@ -39,9 +41,9 @@ function Book() {
                 style={{}}
                 className=""
                 minWidth={300}
-                maxWidth={400}
+                maxWidth={300}
                 minHeight={400}
-                maxHeight={500}
+                maxHeight={400}
                 drawShadow={true}
                 flippingTime={1000}
                 usePortrait={true}
