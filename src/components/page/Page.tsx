@@ -29,16 +29,20 @@ let Page: FC<propsPage> = ({ colors, pageNumber, isViceVersa }) => {
         ar.push(grad)
     }
 
-    let page = ar.map((el, index) => <div key={index} className={style.row}>
-        {el.map((color, index) =>
-            <span key={index} style={{ background: color }} className={style.block}></span>)}
-    </div>
+    let page = ar.map((el, index) =>
+        <div key={index} className={style.row}>
+            {el.map((color, index) =>
+                <span key={index} style={{ background: color }} className={style.block}></span>)}
+        </div>
     )
 
     return (
         <div className={style.wrapper}>
-            {page}
-            <div className={isViceVersa?style.viceVersa:""}>{pageNumber}</div>
+            <div className='gradient_page'>
+                {page}
+            </div>
+            
+            <div className={isViceVersa ? style.viceVersa : ""}>{pageNumber}</div>
         </div>
     );
 }

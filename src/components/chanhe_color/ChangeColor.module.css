@@ -10,22 +10,7 @@
     margin: 10px;
     flex-wrap: wrap;
 }
-button{
-    margin: 0px 10px;
-    border: 0px;
-    background: #2ba8fb;
-    border-radius: 20px;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-    outline: none;
-}
-input[type="color"] {
-    margin: 10px;
-    padding: 0px;
-    border: 0px;
-    cursor: pointer;
-}
+
 .color {
     display: flex;
     justify-content: center;
