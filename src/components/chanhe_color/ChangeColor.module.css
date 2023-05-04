@@ -8,6 +8,7 @@
 .color_block{
     display: flex;
     margin: 10px;
+    flex-wrap: wrap;
 }
 button{
     margin: 0px 10px;

@@ -2,3 +2,16 @@
     display: flex;
     justify-content: center;
 }
+.flip_book{
+    /* max-width: 600px; */
+}
+.cover_block{
+    width: 30px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    vertical-align: center;
+    background: red;
+}
